@@ -1,0 +1,80 @@
+.logo{
+  background: #fcfcfba1;
+  padding: 20px 20px;
+  text-align: center;
+}
+.logo h1 {
+  position: relative;
+  color: #5C2610;
+  font-size: 3em;
+  font-weight: normal;
+  line-height: 1;
+  padding: 10px 0;
+  margin: 0;
+  display: inline-block;
+}
+.text{
+  padding: 10px 40px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 7px 3px #aa3e0c87;
+  text-indent: 30px;
+  padding: 10px 20px 10px 20px;
+  margin: 20px auto;
+  width: 400px;
+
+}
+.lunchtext {
+  position: absolute;
+  top: 67%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dinnertext {
+  position: absolute;
+  top: 67%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+}
+.breakfasttext {
+  position: absolute;
+  top: 67%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.dinner{
+  border-radius: 8px;
+  position : relative ; 
+  width:400px;
+}
+.lunch{
+  border-radius: 8px;
+  position : relative ; 
+  width:385px;
+  left: 20px;
+}
+.breakfast{
+  border-radius: 8px;
+  position : relative ; 
+  width:450px;
+  left: 40px;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form{
+  position:absolute;
+  top: 75%;
+  left: 38%;
+}
+.caption{
+  font-size: 24px;
+  text-align: center;
+}
+.form textarea{
+  width: 100%;
+  margin: 5px 0;
+  padding: 5px 15px;
+}
