@@ -22,7 +22,6 @@
   padding: 10px 20px 10px 20px;
   margin: 20px auto;
   width: 400px;
-
 }
 .lunchtext {
   position: absolute;
@@ -66,15 +65,99 @@
 }
 .form{
   position:absolute;
-  top: 75%;
-  left: 38%;
+  top: 73%;
+  left: 42%;
 }
 .caption{
   font-size: 24px;
   text-align: center;
+  color: #5C2610;
 }
 .form textarea{
   width: 100%;
   margin: 5px 0;
   padding: 5px 15px;
+}
+.listname{
+  font-size: 24px;
+  position : absolute;
+  color: #5C2610;
+  top: 70%;
+  left: 22%;
+}
+
+.beads {
+  list-style: none;
+  background: #EEE3DB;
+  margin: 0;
+  padding-left: 40px;
+  border-radius: 5px;
+  position: absolute;
+  top: 78%;
+  left: 20%;
+}
+.beads li {
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 40px;
+  border-bottom: 1px solid #D4D7D6;
+  position: relative;
+}
+.beads a {
+  text-decoration: none;
+  color: #464643;
+  display: block;
+  line-height: 40px;
+  position: relative;
+}
+.beads a:before {
+  content:"";
+  position: absolute;
+  left: -20px;
+  top: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #A58063;
+}
+.beads li:last-child {border-bottom: none;}
+.beads li:before,
+.beads li:after {
+  content:"";
+  position: absolute;
+  border-radius: 50%;
+}
+.beads li:before {
+  top: calc(50% - 5px);
+  background: #E0926E;
+  left: -22px;
+  width: 10px;
+  height: 10px;
+  transition: 0.5s linear;
+}
+.beads li:after {
+  bottom: 6px;
+  left: -20px;
+  width: 6px;
+  height: 6px;
+  background: #A58063;
+}
+.beads li:hover:before {background: #FFCE08;}
+.contributors {
+  font-size: 24px;
+  position: absolute;
+  color: #5C2610;
+  top: 70%;
+  left: 70%;
+}
+.contributorstable {
+  background-color: #ce8f7b;
+  position: absolute;
+  top: 78%;
+  left: 65%;
+  border: 2px #EEE3DB solid;
+}
+.contributorstable, td, tr {
+  font-size: 20px;
+  border: 2px #EEE3DB solid;
 }
