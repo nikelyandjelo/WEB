@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Розмітка з плаваючими блоками</title>
+    <style>
+        table {
+            height: 200px;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        .blue {
+            background-color: blue;
+            color: white;
+        }
+
+        #b2,
+        #b5 {
+            width: 10%;
+        }
+
+        #b4 {
+            height: 80%;
+        }
+
+        #b1,
+        #b3 {
+            height: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table width="800">
+        <tbody>
+            <tr>
+                <td id="b2" class="orange" rowspan="3">2</td>
+                <td id="b1" class="blue">1</td>
+            </tr>
+            <tr>
+                <td id="b4">4</td>
+            </tr>
+            <tr>
+                <td id="b3" class="blue">3</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+
+    <table width="100%">
+        <tbody>
+            <tr>
+                <td id="b2" class="orange" rowspan="3">2</td>
+                <td id="b1" class="blue">1</td>
+            </tr>
+            <tr>
+                <td id="b4">4</td>
+            </tr>
+            <tr>
+                <td id="b3" class="blue">3</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>
