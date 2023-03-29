@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quicksort</title>
+  </head>
+  <body>
+    <p>Введіть к-ть елементів масиву:</p>
+    <input type="text" id="numElements">
+    <button onclick="sortArray()">Ввести</button>
+    <br><br>
+    <p>Введений масив:</p>
+    <div id="arrayElements">
+    </div>
+    <br><br>
+    <p>Відсортований масив:</p>
+    <div id="sortedArray">
+    </div>
+    <script>
+      function quickSort(arr, left, right) {
+        if (left < right) {
+          let pivotIdx = partition(arr, left, right);
+          quickSort(arr, left, pivotIdx - 1);
+          quickSort(arr, pivotIdx + 1, right);
+        }
+      }
+
+      function partition(arr, left, right) {
+        let pivot = arr[right];
+        let i = left - 1;
+        
+        for (let j = left; j < right; j++) {
+          if (arr[j] < pivot) {
+            i++;
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+          }
+        }
+        
+        [arr[i+1], arr[right]] = [arr[right], arr[i+1]];
+        return i + 1;
+      }
+
+      function sortArray() {
+        let numElements = parseInt(document.getElementById("numElements").value);
+        let arr = [];
+        
+        for (let i = 0; i < numElements; i++) {
+          let elem = parseInt(prompt("Введіть елемент :"));
+          arr.push(elem);
+        }
+        
+        let arrayElements = document.getElementById("arrayElements");
+        arrayElements.innerHTML = arr.join(", ");
+        
+        quickSort(arr, 0, arr.length - 1);
+        
+        let sortedArray = document.getElementById("sortedArray");
+        sortedArray.innerHTML = arr.join(", ");
+      }
+    </script>
+  </body>
+</html>
