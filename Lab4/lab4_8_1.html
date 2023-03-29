@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<p id="min"></p>
+<p id="noelements"></p>
+<script>
+
+// створення двох масивів з введеними користувачем значеннями
+let arr1 = [];
+let arr2 = [];
+let n = parseInt(prompt("Введіть кількість елементів масивів: "));
+for (let i = 0; i < n; i++) {
+  arr1.push(parseInt(prompt("Введіть елемент масиву 1: ")));
+  arr2.push(parseInt(prompt("Введіть елемент масиву 2: ")));
+}
+
+// пошук найменшого елемента, який співпадає зі значеннями другого масиву
+let min = Infinity;
+for (let i = 0; i < n; i++) {
+  if (arr2.includes(arr1[i]) && arr1[i] < min) {
+    min = arr1[i];
+  }
+}
+
+// виведення результату
+if (min !== Infinity) {
+  let outputElement1 = document.querySelector("#min");
+   outputElement1.innerHTML = "Наймеший співпадаючий елемент: " + min;
+} else {
+  let outputElement2 = document.querySelector("#noelements");
+   outputElement2.innerHTML = "Співпадаючих елементів немає."
+}
+
+</script>
+
+</body>
+</html>

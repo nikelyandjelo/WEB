@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bubble Sort</title>
+  </head>
+  <body>
+  <p id="in"></p>
+  <p id="out"></p>
+  <script>
+      // вхідний масив
+// створення масиву з введеними користувачем значеннями
+let arr1 = [];
+let n = parseInt(prompt("Введіть кількість елементів масиву: "));
+for (let i = 0; i < n; i++) {
+  arr1.push(parseInt(prompt("Введіть елемент масиву: ")));
+}
+let outputElement1 = document.querySelector("#in");
+outputElement1.innerHTML = "Вхідний масив: " + arr1
+
+// функція для сортування масиву методом бульбашки
+function bubbleSort(arr) {
+  let len = arr.length;
+  for (let i = 0; i < len; i++) {
+    for (let j = 0; j < len - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        let tmp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = tmp;
+      }
+    }
+  }
+  return arr;
+}
+
+// виклик функції сортування
+arr2 = bubbleSort(arr1);
+
+// виведення відсортованого масиву
+let outputElement2 = document.querySelector("#out");
+outputElement2.innerHTML = "Відсортований масив: " + arr2
+    </script>
+  </body>
+</html>
