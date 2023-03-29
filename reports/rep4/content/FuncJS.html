@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="../../../Lab4/funcJS.html" target="_blank">До виконання</a><br>
+<p>URL: </p>
+<img src="../../images/1.png"><br>
+<img src="../../images/11.png">
+<p>Код: </p>
+&ltdiv align="left"&gt
+&lta HREF="JavaScript:alert('Спасибо за внимание!!!');"&gt Внимание!!!&lt/a&gt
+
+&lt/div&gt
+<p>Обробник події (handler): </p>
+<img src="../../images/2.png"><br>
+<img src="../../images/22.png"><br>
+<p>Код: </p>
+&ltdiv align="center"&gt
+&ltinput value="Нажми меня" onclick="alert('Клик!')" type="button"&gt
+
+&lt/div&gt
+<p>Підстановка (entity): </p>
+<img src="../../images/3.png"><br>
+<img src="../../images/33.png"><br>
+<p>Код: </p>
+&ltinput type="text" onchange="alert(this.value)"&gt<br>
+&ltinput type="button" value="Кнопка"&gt<br>
+<p>Вставка (тег SCRIPT): </p>
+<img src="../../images/4.png"><br>
+<p>Код: </p>
+<pre><code>
+    &ltscript type="text/javascript"&gt
+        document.write ('&lttable width="100%" border="1"&gt');
+        for (i=1; i&lt6; i++) {
+          document.writeln("&lttr&gt");
+          for (j=1; j&lt6; j++) document.write("&lttd&gt" + i + j + "&lt\/td&gt");
+          document.writeln("&lt\/tr&gt");
+        }
+        document.write ("&lt\/table&gt ");
+
+    &lt/script&gt
+    </code></pre>
+</body>
+</html>

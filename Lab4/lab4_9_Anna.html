@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 4</title>
+</head>
+<body>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<p>Стисло про <a target="_blank"
+                 href="https://ru.wikipedia.org/wiki/%D0%91%D1%8B%D1%81%D1%82%D1%80%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0" data-toggle="tooltip"
+                 data-placement="top" title="алгоритм сортування, розроблений Тоні Гоаром, який не потребує додаткової пам'яті">
+  алгоритм швидкого сортування</a></p>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+<p>Для реалізації роботи алгоритму необхідно:</p>
+<p>1) Обрати элемент з масиву. Назвемо его <a target="_blank"
+                                                 data-toggle="tooltip"
+                                                 data-placement="top"
+                                                 title="це може бути будь-який з элементів масиву.
+                                                 Від вибору опорного елемента не залежить коректність
+                                                 алгоритму, але в окремих випадках може сильно залежати
+                                                 его ефективність">опорним.</a></p>
+<p>2) Перерозподіл елементів у масиві таким чином, що елементи, менші за опорний,
+  треба переставити перед ним, а більші чи рівні - після.</p>
+<p>3) Рекурсивно застосувати перші два кроки до двох підмасивів зліва та справа від опорного елементу. <a target="_blank"
+                                                                                                      data-toggle="tooltip"
+                                                                                                      data-placement="top"
+                                                                                                      title="метод визначення класу чи об'єкту через попереднє задання
+                                                                                                      одного чи декількох (зазвичай простих) його базових випадків чи
+                                                                                                      методів, а потім заданням на їхній основі правила побудови класу,
+                                                                                                      який визначається.">Рекурсія</a> не застосовується до
+                                                                                                      масива, що містить лише один елемент або елементи відсутні.</p>
+<p>Приклад роботы алгоритму:</p>
+
+
+
+<script type="text/javascript">
+  function quicksort(array) {
+    if (array.length <= 1) {
+      return array;
+    }
+
+    var pivot = array[0];
+
+    var left = [];
+    var right = [];
+
+    for (var i = 1; i < array.length; i++) {
+      array[i] < pivot ? left.push(array[i]) : right.push(array[i]);
+    }
+
+    return quicksort(left).concat(pivot, quicksort(right));
+  };
+
+  var unsorted = Array.from({length: 10}, () => Math.floor(Math.random() * 100));
+  var sorted = quicksort(unsorted);
+
+  document.write ('<p>Випадково згенерований масив:</p>', unsorted);
+  document.write ('<br><br>');
+  document.write ('<p>Відсортований масив:</p>', sorted);
+
+</script>
+</body>
+</html>
