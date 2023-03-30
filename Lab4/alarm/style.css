@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+}
+
+.form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+label {
+    display: inline-block;
+    width: 50px;
+}
+
+button {
+    margin-top: 10px;
+}
+
+button:disabled {
+    background-color: lightgray;
+    color: gray;
+}

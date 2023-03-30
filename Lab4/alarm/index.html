@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Будильник</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Будильник</h1>
+    <div class="form">
+        <label for="time">Час:</label>
+        <input type="time" id="time">
+        <br>
+        <label for="date">Дата:</label>
+        <input type="date" id="date">
+        <br>
+        <button id="set-alarm">Встановити будильник</button>
+        <button id="stop-alarm" disabled>Зупинити будильник</button>
+    </div>
+
+    <audio id="alarm-sound">
+        <source src="alarm.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
