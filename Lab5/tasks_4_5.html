@@ -7,13 +7,11 @@
   <title>Document</title>
   <style>
 
-
     *,
     *::before,
     *::after {
       box-sizing: border-box;
     }
-
     html {
       font-family: sans-serif;
       line-height: 1.15;
@@ -32,7 +30,6 @@
       background-color: #fff;
       padding-top: 1rem;
     }
-
 
     .fa {
       position: relative;
@@ -73,7 +70,6 @@
       color: white;
     }
 
-
   </style>
 </head>
 
@@ -93,7 +89,8 @@
 
 <link type="text/css" rel="stylesheet" href="https://www.meteoprog.ua/css/winformer.min.css?id=100">
 
-<div class="meteoprog-informer" style="width: 312px" data-params='{"city_ids":"2533","domain":"https://www.meteoprog.com/ua/","id":"645b736a2bac92e5528b4f08","lang":"ua"}'>
+<div class="meteoprog-informer" style="width: 312px" data-params='{"city_ids":"2533","domain":"https://www.meteoprog.com/ua/",
+                                                                    "id":"645b736a2bac92e5528b4f08","lang":"ua"}'>
 
 
   <a title="Погода в місті Київ" target="_blank" href="https://www.meteoprog.com/ua/weather/Kyiv/">
@@ -196,11 +193,22 @@
   }
 </script>
 
+<div id="minfin-informer-m1Fn-currency">
+  Завантажуємо <a href="https://minfin.com.ua/ua/currency/" target="_blank">курси валют</a>
+  від minfin.com.ua</a>
+</div>
+<script>
+  var iframe = '<ifra'+'me width="301" height="120" fram'+'eborder="0" ' +
+          'src="https://informer.minfin.com.ua/ua/gen/course/?color=violet" ' +
+          'vspace="0" scrolling="no" hspace="0" allowtransparency="true"' +
+          'style="width:301px;height:120px;ove'+'rflow:hidden;"></iframe>';
+  var cl = 'minfin-informer-m1Fn-currency';
+  document.getElementById(cl).innerHTML = iframe;
+</script>
+<noscript>
+  <img src="https://informer.minfin.com.ua/gen/img.png" width="1" height="1"
+       alt="minfin.com.ua: курси валют" title="Курс валют" border="0" /></noscript>
 
-<!-- Minfin.com.ua currency informer 275x120 yellow-->
-<!-- Minfin.com.ua currency informer 301x120 violet-->
-<div id="minfin-informer-m1Fn-currency">Завантажуємо <a href="https://minfin.com.ua/ua/currency/" target="_blank">курси валют</a> від minfin.com.ua</a></div><script>var iframe = '<ifra'+'me width="301" height="120" fram'+'eborder="0" src="https://informer.minfin.com.ua/ua/gen/course/?color=violet" vspace="0" scrolling="no" hspace="0" allowtransparency="true"style="width:301px;height:120px;ove'+'rflow:hidden;"></iframe>';var cl = 'minfin-informer-m1Fn-currency';document.getElementById(cl).innerHTML = iframe; </script><noscript><img src="https://informer.minfin.com.ua/gen/img.png" width="1" height="1" alt="minfin.com.ua: курси валют" title="Курс валют" border="0" /></noscript>
-<!-- Minfin.com.ua currency informer 301x120 violet--><!-- Minfin.com.ua currency informer 275x120 yellow-->
 <a href="/Report.html" target="_blank">До звіту</a><br>
 
 </body>
