@@ -63,86 +63,91 @@
   align-items: center;
   justify-content: center;
 }
-.form{
-  position:absolute;
-  top: 73%;
-  left: 42%;
-}
-.caption{
-  font-size: 24px;
-  text-align: center;
-  color: #5C2610;
-}
-.form textarea{
-  width: 100%;
-  margin: 5px 0;
-  padding: 5px 15px;
-}
-.listname{
-  font-size: 24px;
-  position : absolute;
-  color: #5C2610;
-  top: 70%;
-  left: 22%;
+.dropdown-toggle {
+  background-color: #f8f9fa;
+  color: #212529;
+  border: 1px solid #ced4da;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  position: absolute;
+  top: 75%;
+  left: 14%;
 }
 
-.beads {
-  list-style: none;
-  background: #EEE3DB;
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 80%;
+  left: 14%;
+  z-index: 1000;
+  padding: 0;
   margin: 0;
-  padding-left: 40px;
-  border-radius: 5px;
-  position: absolute;
-  top: 78%;
-  left: 20%;
+  list-style: none;
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
 }
-.beads li {
-  text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 40px;
-  border-bottom: 1px solid #D4D7D6;
-  position: relative;
+
+.dropdown-menu li {
+  padding: 1rem 1.5rem;
 }
-.beads a {
-  text-decoration: none;
-  color: #464643;
+
+.dropdown-menu li a {
   display: block;
-  line-height: 40px;
-  position: relative;
+  color: #212529;
+  text-decoration: none;
 }
-.beads a:before {
-  content:"";
+
+.dropdown-menu li:hover {
+  background-color: #e9ecef;
+}
+
+.dropdown-toggle:focus,
+.dropdown-toggle:hover {
+  background-color: #e9ecef;
+  color: #212529;
+  text-decoration: none;
+  outline: 0;
+  border-color: #adb5bd;
+}
+
+.dropdown-toggle:focus .dropdown-menu,
+.dropdown-toggle:hover .dropdown-menu {
+  display: block;
+}
+.accordion {
+  border: 1px solid #ccc;
+  border-radius: 4px;
   position: absolute;
-  left: -20px;
-  top: 6px;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: #A58063;
+  top: 75%;
+  left: 25%;
 }
-.beads li:last-child {border-bottom: none;}
-.beads li:before,
-.beads li:after {
-  content:"";
-  position: absolute;
-  border-radius: 50%;
+
+
+.accordion-header {
+  background-color: #eee;
+  border: none;
+  color: #444;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
 }
-.beads li:before {
-  top: calc(50% - 5px);
-  background: #E0926E;
-  left: -22px;
-  width: 10px;
-  height: 10px;
-  transition: 0.5s linear;
+
+.accordion-panel {
+  border-top: none;
+  display: none;
+  padding: 10px;
 }
-.beads li:after {
-  bottom: 6px;
-  left: -20px;
-  width: 6px;
-  height: 6px;
-  background: #A58063;
+
+.accordion-panel p {
+  margin: 0;
 }
-.beads li:hover:before {background: #FFCE08;}
+
 .contributors {
   font-size: 24px;
   position: absolute;
