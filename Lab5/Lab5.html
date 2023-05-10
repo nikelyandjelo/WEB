@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="Lab5.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
 </head>
 
 <style>
@@ -59,7 +62,15 @@
 <a href="#" class="fa fa-youtube"></a>
 <a href="#" class="fa fa-instagram"></a>
 <a href="#" class="fa fa-pinterest"></a>
+<script>
+  $( function() {
+    $( ".fa" ).draggable();
+  } );
+  $(document).on("mouseenter", ".fa", function() {
+    $(this).draggable();
+  });
 
+</script>
 <!-- Minfin.com.ua currency informer 275x120 yellow-->
 <!-- Minfin.com.ua currency informer 301x120 violet
 <div id="minfin-informer-m1Fn-currency">Завантажуємо
@@ -83,6 +94,14 @@
     <div class="text">
     <p>Наш блог про їжу, тут ви знайдете найкращі рецепти з урахуванням БЖУ</p>
     </div>
+    <script>
+  $( function() {
+    $( ".text" ).resizable();
+    $(document).on("mouseenter", ".box", function() {
+      $(this).resizable();
+    });
+  } );
+</script>
     <div class="box">
     <img class="dinner" src="images/dinner.jpg">
     <div class="dinnertext">Вечеря</div>
