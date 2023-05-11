@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Unite Gallery</title>
+
+<script type='text/javascript' src='./jsGallery/jquery-11.0.min.js'></script>	
+<script type='text/javascript' src='./jsGallery/unitegallery.min.js'></script>	
+
+	<link rel='stylesheet' href='unite-gallery.css' type='text/css' />
+	
+	<script type='text/javascript' src='./jsGallery/ug-theme-compact.js'></script>
+	
+	
+</head>
+
+<body>
+	
+	<h2>Фото</h2>
+	
+	<div id="gallery" style="display:none; position: relative; left: 20vw;">
+	
+		<img alt="Preview Image 1"
+		src="https://picsum.photos/1000/300?random=12"
+		data-image="https://picsum.photos/1000/300?random=12"
+		data-description="Preview Image 1 Description">
+   
+   <img alt="Preview Image 2"
+		src="https://picsum.photos/1000/300?random=1"
+		data-image="https://picsum.photos/1000/300?random=13"
+		data-description="Preview Image 2 Description">
+		
+   <img alt="Preview Image 3"
+		src="https://picsum.photos/1000/300?random=14"
+		data-image="https://picsum.photos/1000/300?random=14"
+		data-description="Preview Image 3 Description">
+		
+   <img alt="Preview Image 4"
+		src="https://picsum.photos/1000/300?random=15"
+		data-image="https://picsum.photos/1000/300?random=15"
+		data-description="Preview Image 4 Description">
+   
+   <img alt="Preview Image 5"
+		src="ihttps://picsum.photos/1000/300?random=16"
+		data-image="https://picsum.photos/1000/300?random=16"
+		data-description="Preview Image 5 Description">
+
+   <img alt="Preview Image 6"
+	   src="ihttps://picsum.photos/1000/300?random=17"
+	   data-image="https://picsum.photos/1000/300?random=17"
+	   data-description="Preview Image 5 Description">
+
+   <img alt="Preview Image 7"
+	   src="ihttps://picsum.photos/1000/300?random=18"
+	   data-image="https://picsum.photos/1000/300?random=18"
+	   data-description="Preview Image 5 Description">
+   <img alt="Preview Image 8"
+	   src="ihttps://picsum.photos/1000/300?random=19"
+	   data-image="https://picsum.photos/1000/300?random=19"
+	   data-description="Preview Image 5 Description">
+
+		
+			 
+		
+			 
+	</div>
+	
+	<br><br>		
+	<input type="button" value=">" onclick="api.nextItem()" style="position: relative; left: 1195px; bottom: 44vh;">
+	<input type="button" value="<" onclick="api.prevItem()" style="position: relative; left: 230px; bottom: 44vh;">
+	<input type="button" value="Начать" onclick="api.play()" style="position: relative; left: 470px;">
+	<input type="button" value="Стоп" onclick="api.stop()" style="position: relative; left: 470px;">
+	<input type="button" value="Полный экран" onclick="api.toggleFullscreen()" style="position: relative; left: 470px;">
+	<input type="button" value="Приблизить" onclick="api.zoomIn()" style="position: relative; left: 470px;">
+	<input type="button" value="Отдалить" onclick="api.zoomOut()" style="position: relative; left: 470px;">
+	<input type="button" value="Сбросить зум" onclick="api.resetZoom()" style="position: relative; left: 470px;">
+	<br><br>		
+			
+	
+		
+	<script type="text/javascript">
+		var api;
+
+		jQuery(document).ready(function(){
+			api = jQuery("#gallery").unitegallery();
+		
+	
+			
+			api.on("item_change",function(num, data){	
+				
+				if(console)
+					console.log(data);
+				
+			});
+	
+			api.on("resize",function(){	
+			});
+	
+			api.on("enter_fullscreen",function(){	
+			});
+	
+			api.on("exit_fullscreen",function(){
+			});
+			
+			api.on("play",function(){	
+			});
+	
+			api.on("stop",function(){		
+			});
+	
+			api.on("pause",function(){		
+			});
+	
+			api.on("continue",function(){		
+			});
+			
+			
+		});
+			
+			
+	</script>
+
+	
+</body>
+</html>
