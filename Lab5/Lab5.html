@@ -11,10 +11,14 @@
     <script src="unitegallery/themes/default/ug-theme-default.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/unitegallery/1.7.45/js/unitegallery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="Lab5.css" rel="stylesheet" type="text/css">
     <script src="Lab5.js"></script>
+    
 </head>
 
 <style>
@@ -65,11 +69,32 @@
     <a href="#" class="fa fa-youtube"></a>
     <a href="#" class="fa fa-instagram"></a>
     <a href="#" class="fa fa-pinterest"></a>
+    
+    <script>
+  $( function() {
+    $( ".fa" ).draggable();
+  } );
+  $(document).on("mouseenter", ".fa", function() {
+    $(this).draggable();
+  });
+
+</script>
 
     <div class="logo"><h1>Кулінарний блог</h1></div>
     <div class="text">
     <p>Наш блог про їжу, тут ви знайдете найкращі рецепти з урахуванням БЖУ</p>
     </div>
+    
+    <script>
+  $( function() {
+    $( ".text" ).resizable();
+    $(document).on("mouseenter", ".box", function() {
+      $(this).resizable();
+    });
+  } );
+</script>
+    
+    
     <div class="box">
     <img class="dinner" src="images/dinner.jpg">
     <div class="dinnertext">Вечеря</div>
